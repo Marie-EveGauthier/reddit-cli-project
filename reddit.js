@@ -30,7 +30,6 @@ function getSortedHomepage(sortingMethod, callback) {
   var address = "https://www.reddit.com/" + sortingMethod + ".json";
   request(address, function (error, result) {
     var resultObject = JSON.parse(result.body);
-     //console.log(resultObject[0].data.children);
     if (resultObject[0].data) {
         callback("It's not a valid sorting method.");
     } else {
