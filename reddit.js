@@ -51,7 +51,8 @@ function getSubreddit(subreddit, callback) {
   request(address, function (error, result) {
     var resultObject = JSON.parse(result.body);
     if (!resultObject.data.children[0]) {
-        callback("It's not a valid subreddit.");
+        callback(
+          );
     } else {
       var arrOfSubreddit = resultObject.data.children;
       callback(arrOfSubreddit);
